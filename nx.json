@@ -7,5 +7,12 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "demo-prio-e2e": {
+      "tags": []
+    },
+    "demo-prio": {
+      "tags": ["scope:mr", "type:app"]
+    }
+  }
 }

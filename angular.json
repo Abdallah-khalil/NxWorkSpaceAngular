@@ -2,13 +2,139 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "demo-prio": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/workspace:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/demo-prio",
+      "sourceRoot": "apps/demo-prio/src",
+      "prefix": "prio",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/demo-prio",
+            "index": "apps/demo-prio/src/index.html",
+            "main": "apps/demo-prio/src/main.ts",
+            "polyfills": "apps/demo-prio/src/polyfills.ts",
+            "tsConfig": "apps/demo-prio/tsconfig.app.json",
+            "assets": [
+              "apps/demo-prio/src/favicon.ico",
+              "apps/demo-prio/src/assets"
+            ],
+            "styles": ["apps/demo-prio/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/demo-prio/src/environments/environment.ts",
+                  "with": "apps/demo-prio/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "demo-prio:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-prio:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo-prio:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/demo-prio/tsconfig.app.json",
+              "apps/demo-prio/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/demo-prio/jest.config.js",
+            "tsConfig": "apps/demo-prio/tsconfig.spec.json",
+            "setupFile": "apps/demo-prio/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "demo-prio-e2e": {
+      "root": "apps/demo-prio-e2e",
+      "sourceRoot": "apps/demo-prio-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/demo-prio-e2e/cypress.json",
+            "tsConfig": "apps/demo-prio-e2e/tsconfig.e2e.json",
+            "devServerTarget": "demo-prio:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "demo-prio:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/demo-prio-e2e/tsconfig.e2e.json"
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
   },
-  "schematics": {}
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "demo-prio"
 }
