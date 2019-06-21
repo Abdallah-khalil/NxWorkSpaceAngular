@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-prio';
+  links = [
+    { path: 'alerts', title: 'Alerts' },
+    { path: 'badges', title: 'Badges' },
+    { path: 'buttons', title: 'Buttons' },
+    { path: 'cards', title: 'Cards' },
+    { path: 'checkboxes', title: 'Checkboxes' }
+  ];
+
+  constructor() {}
 }
