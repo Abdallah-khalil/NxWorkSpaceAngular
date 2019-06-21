@@ -26,8 +26,15 @@
               "apps/demo-prio/src/favicon.ico",
               "apps/demo-prio/src/assets"
             ],
-            "styles": ["apps/demo-prio/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "node_modules/@clr/icons/clr-icons.min.css",
+              "node_modules/@clr/ui/clr-ui.min.css",
+              "apps/demo-prio/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/@clr/icons/clr-icons.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -80,7 +87,9 @@
               "apps/demo-prio/tsconfig.app.json",
               "apps/demo-prio/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "test": {
