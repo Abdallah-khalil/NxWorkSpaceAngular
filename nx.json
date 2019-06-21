@@ -13,6 +13,9 @@
     },
     "demo-prio": {
       "tags": ["scope:mr", "type:app"]
+    },
+    "shared-ui-core": {
+      "tags": ["scope:shared", "type:ui"]
     }
   }
 }
