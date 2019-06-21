@@ -16,6 +16,9 @@
     },
     "shared-ui-core": {
       "tags": ["scope:shared", "type:ui"]
+    },
+    "shared-util-core": {
+      "tags": ["scope:shared", "type:util"]
     }
   }
 }

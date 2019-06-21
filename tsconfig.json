@@ -18,6 +18,9 @@
     "paths": {
       "@demo-prio-workspace/shared/ui-core": [
         "libs/shared/ui-core/src/index.ts"
+      ],
+      "@demo-prio-workspace/shared/util-core": [
+        "libs/shared/util-core/src/index.ts"
       ]
     }
   },
