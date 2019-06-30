@@ -126,18 +126,18 @@
         }
       }
     },
-    "shared-ui-core": {
+    "shared-ui-elements": {
       "projectType": "library",
-      "root": "libs/shared/ui-core",
-      "sourceRoot": "libs/shared/ui-core/src",
-      "prefix": "prio",
+      "root": "libs/shared/ui-elements",
+      "sourceRoot": "libs/shared/ui-elements/src",
+      "prefix": "demo-prio-workspace",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/shared/ui-core/tsconfig.lib.json",
-              "libs/shared/ui-core/tsconfig.spec.json"
+              "libs/shared/ui-elements/tsconfig.lib.json",
+              "libs/shared/ui-elements/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -145,40 +145,9 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/shared/ui-core/jest.config.js",
-            "tsConfig": "libs/shared/ui-core/tsconfig.spec.json",
-            "setupFile": "libs/shared/ui-core/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "shared-util-core": {
-      "projectType": "library",
-      "root": "libs/shared/util-core",
-      "sourceRoot": "libs/shared/util-core/src",
-      "prefix": "prio",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/shared/util-core/tsconfig.lib.json",
-              "libs/shared/util-core/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/shared/util-core/jest.config.js",
-            "tsConfig": "libs/shared/util-core/tsconfig.spec.json",
-            "setupFile": "libs/shared/util-core/src/test-setup.ts"
+            "jestConfig": "libs/shared/ui-elements/jest.config.js",
+            "tsConfig": "libs/shared/ui-elements/tsconfig.spec.json",
+            "setupFile": "libs/shared/ui-elements/src/test-setup.ts"
           }
         }
       },
