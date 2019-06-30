@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@demo-prio-workspace/shared/ui-elements": [
+        "libs/shared/ui-elements/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
