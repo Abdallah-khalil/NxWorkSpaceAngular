@@ -211,8 +211,15 @@
               "apps/demo-clarity/src/favicon.ico",
               "apps/demo-clarity/src/assets"
             ],
-            "styles": ["apps/demo-clarity/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "node_modules/@clr/icons/clr-icons.min.css",
+              "node_modules/@clr/ui/clr-ui.min.css",
+              "apps/demo-prio/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "node_modules/@clr/icons/clr-icons.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -326,6 +333,130 @@
             "jestConfig": "libs/ks-clarity/ks-clr-button/jest.config.js",
             "tsConfig": "libs/ks-clarity/ks-clr-button/tsconfig.spec.json",
             "setupFile": "libs/ks-clarity/ks-clr-button/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ks-clarity-ks-clr-alert": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/ks-clr-alert",
+      "sourceRoot": "libs/ks-clarity/ks-clr-alert/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/ks-clr-alert/tsconfig.lib.json",
+              "libs/ks-clarity/ks-clr-alert/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/ks-clr-alert/jest.config.js",
+            "tsConfig": "libs/ks-clarity/ks-clr-alert/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/ks-clr-alert/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ks-clarity-label-and-badge": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/label-and-badge",
+      "sourceRoot": "libs/ks-clarity/label-and-badge/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/label-and-badge/tsconfig.lib.json",
+              "libs/ks-clarity/label-and-badge/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/label-and-badge/jest.config.js",
+            "tsConfig": "libs/ks-clarity/label-and-badge/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/label-and-badge/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ks-clarity-data-grid": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/data-grid",
+      "sourceRoot": "libs/ks-clarity/data-grid/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/data-grid/tsconfig.lib.json",
+              "libs/ks-clarity/data-grid/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/data-grid/jest.config.js",
+            "tsConfig": "libs/ks-clarity/data-grid/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/data-grid/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ks-clarity-util-inventory": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/util-inventory",
+      "sourceRoot": "libs/ks-clarity/util-inventory/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/util-inventory/tsconfig.lib.json",
+              "libs/ks-clarity/util-inventory/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/util-inventory/jest.config.js",
+            "tsConfig": "libs/ks-clarity/util-inventory/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/util-inventory/src/test-setup.ts"
           }
         }
       },

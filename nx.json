@@ -28,6 +28,18 @@
     },
     "ks-clarity-ks-clr-button": {
       "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-ks-clr-alert": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-label-and-badge": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-data-grid": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-util-inventory": {
+      "tags": ["scope:clr", "type:util"]
     }
   }
 }

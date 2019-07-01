@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 
-import { MainLayoutComponent } from '@demo-prio-workspace/layout';
+import { MainLayoutComponent, LayoutModule } from '@demo-prio-workspace/layout';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/button',
+    redirectTo: '/alerts/overview',
     pathMatch: 'full'
   },
   {
@@ -19,20 +20,43 @@ const routes: Routes = [
       {
         path: 'button',
         loadChildren: () =>
-          // import('../../../../libs/ks-clarity/ks-clr-button/src/lib/ks-clarity-ks-clr-button.module').then(
-          //   m => m.KsClarityKsClrButtonModule
-          // )
+          import('@demo-prio-workspace/ks-clarity/ks-clr-button').then(
+            m => m.KsClrButtonModule
+          )
+      },
+      {
+        path: 'alerts',
+        loadChildren: () =>
+          import('@demo-prio-workspace/ks-clarity/ks-clr-alert').then(
+            m => m.KsClrAlertModule
+          )
+      },
+      {
+        path: 'label-badge',
+        loadChildren: () =>
+          import('@demo-prio-workspace/ks-clarity/label-and-badge').then(
+            m => m.LabelAndBadgeModule
+          )
+      },
+      {
+        path: 'data-grid',
+        loadChildren: () =>
+          import('@demo-prio-workspace/ks-clarity/data-grid').then(
+            m => m.DataGridModule
+          )
       }
     ]
   },
 
   // Fallback when no prior routes is matched
-  { path: '**', redirectTo: '/button', pathMatch: 'full' }
+  { path: '**', redirectTo: '/alerts/overview', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    LayoutModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabled' })
   ],
   providers: [],

@@ -1,1 +1,1 @@
-export * from './lib/ks-clarity-ks-clr-button.module';
+export * from './lib/ks-clr-button.module';

@@ -22,6 +22,18 @@
       "@demo-prio-workspace/layout": ["libs/layout/src/index.ts"],
       "@demo-prio-workspace/ks-clarity/ks-clr-button": [
         "libs/ks-clarity/ks-clr-button/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/ks-clr-alert": [
+        "libs/ks-clarity/ks-clr-alert/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/label-and-badge": [
+        "libs/ks-clarity/label-and-badge/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/data-grid": [
+        "libs/ks-clarity/data-grid/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/util-inventory": [
+        "libs/ks-clarity/util-inventory/src/index.ts"
       ]
     }
   },
