@@ -16,6 +16,18 @@
     },
     "shared-ui-elements": {
       "tags": ["scope:shared", "type:ui"]
+    },
+    "layout": {
+      "tags": ["scope:layout", "type:ui"]
+    },
+    "demo-clarity-e2e": {
+      "tags": []
+    },
+    "demo-clarity": {
+      "tags": ["scope:clarity", "type:app"]
+    },
+    "ks-clarity-ks-clr-button": {
+      "tags": ["scope:clr", "type:feature"]
     }
   }
 }

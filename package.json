@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o --port=4400",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx lint && ng lint",
@@ -36,11 +36,11 @@
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
-    "@clr/angular": "^2.0.1",
-    "@nrwl/angular": "^8.1.2",
     "core-js": "^2.5.4",
     "rxjs": "~6.4.0",
     "zone.js": "^0.9.1",
+    "@clr/angular": "^2.0.1",
+    "@nrwl/angular": "^8.1.2",
     "@clr/ui": "2.0.1",
     "@clr/icons": "2.0.1",
     "@webcomponents/custom-elements": "^1.0.0"

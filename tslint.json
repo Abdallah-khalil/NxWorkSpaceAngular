@@ -56,8 +56,49 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "sourceTag": "type:app",
+            "onlyDependOnLibsWithTags": [
+              "type:util",
+              "type:ui",
+              "type:data-access",
+              "type:feature"
+            ]
+          },
+          {
+            "sourceTag": "scope:mr",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:mr"]
+          },
+          {
+            "sourceTag": "scope:clr",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:clr"]
+          },
+          {
+            "sourceTag": "type:util",
+            "onlyDependOnLibsWithTags": ["type:util"]
+          },
+          {
+            "sourceTag": "type:ui",
+            "onlyDependOnLibsWithTags": ["type:util", "type:ui"]
+          },
+          {
+            "sourceTag": "type:data-access",
+            "onlyDependOnLibsWithTags": ["type:util", "type:data-access"]
+          },
+          {
+            "sourceTag": "type:feature",
+            "onlyDependOnLibsWithTags": [
+              "type:util",
+              "type:ui",
+              "type:data-access"
+            ]
+          },
+          {
+            "sourceTag": "scope:shared",
+            "onlyDependOnLibsWithTags": ["scope:shared"]
+          },
+          {
+            "sourceTag": "scope:layout",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:layout"]
           }
         ]
       }

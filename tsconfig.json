@@ -18,6 +18,10 @@
     "paths": {
       "@demo-prio-workspace/shared/ui-elements": [
         "libs/shared/ui-elements/src/index.ts"
+      ],
+      "@demo-prio-workspace/layout": ["libs/layout/src/index.ts"],
+      "@demo-prio-workspace/ks-clarity/ks-clr-button": [
+        "libs/ks-clarity/ks-clr-button/src/index.ts"
       ]
     }
   },
