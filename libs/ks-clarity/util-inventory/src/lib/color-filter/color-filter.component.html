@@ -1,0 +1,7 @@
+<span
+  *ngFor="let color of allColors"
+  class="color-square color-selectable"
+  (click)="toggleColor(color)"
+  [style.backgroundColor]="color"
+  [class.color-selected]="selectedColors[color]"
+></span>

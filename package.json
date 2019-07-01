@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o --port=4400",
+    "start:clarity": "ng serve demo-clarity -o --port=4400",
+    "start:prio": "ng serve demo-prio -o --port=4400",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx lint && ng lint",
