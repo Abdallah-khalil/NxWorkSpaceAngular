@@ -1,0 +1,26 @@
+<clr-main-container>
+  <prio-header></prio-header>
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+  <nav class="sidenav" [clr-nav-level]="2">
+    <section class="sidenav-content">
+      <section class="nav-group collapsible">
+        <input id="tab1" type="checkbox" />
+        <label for="tab1">Clarity Navigation</label>
+        <ul class="nav-list">
+          <li *ngFor="let link of links">
+            <a
+              *ngIf="link.path != ''"
+              class="nav-link"
+              [routerLink]="[link.path]"
+              [routerLinkActive]="['active']"
+              >{{ link.title }}</a
+            >
+          </li>
+        </ul>
+      </section>
+    </section>
+  </nav>
+  <router-outlet></router-outlet>
+</clr-main-container>
