@@ -1,1 +1,1 @@
-export * from './lib/data-access-auth';
+export * from './lib/data-access-auth.module';
