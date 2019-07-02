@@ -31,6 +31,7 @@ const routes: Routes = [
             m => m.KsClrAlertModule
           )
       },
+    
       {
         path: 'label-badge',
         loadChildren: () =>

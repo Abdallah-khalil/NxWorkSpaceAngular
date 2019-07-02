@@ -34,7 +34,14 @@
       ],
       "@demo-prio-workspace/ks-clarity/util-inventory": [
         "libs/ks-clarity/util-inventory/src/index.ts"
-      ]
+      ],
+      "@demo-prio-workspace/data-access-auth": [
+        "libs/data-access-auth/src/index.ts"
+      ],
+      "@demo-prio-workspace/shared/data-access-shared-auth": [
+        "libs/shared/data-access-shared-auth/src/index.ts"
+      ],
+      "@demo-prio-workspace/feature-login": ["libs/feature-login/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
