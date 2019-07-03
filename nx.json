@@ -44,9 +44,6 @@
     "data-access-auth": {
       "tags": ["scope:auth", "type:data-access"]
     },
-    "shared-data-access-shared-auth": {
-      "tags": ["scope:shared-auth", "type:data-access"]
-    },
     "feature-login": {
       "tags": ["scope:auth", "type:feature"]
     }
