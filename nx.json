@@ -14,11 +14,38 @@
     "demo-prio": {
       "tags": ["scope:mr", "type:app"]
     },
-    "shared-ui-core": {
+    "shared-ui-elements": {
       "tags": ["scope:shared", "type:ui"]
     },
-    "shared-util-core": {
-      "tags": ["scope:shared", "type:util"]
+    "layout": {
+      "tags": ["scope:layout", "type:ui"]
+    },
+    "demo-clarity-e2e": {
+      "tags": []
+    },
+    "demo-clarity": {
+      "tags": ["scope:clarity", "type:app"]
+    },
+    "ks-clarity-ks-clr-button": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-ks-clr-alert": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-label-and-badge": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-data-grid": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-util-inventory": {
+      "tags": ["scope:clr", "type:util"]
+    },
+    "data-access-auth": {
+      "tags": ["scope:auth", "type:data-access"]
+    },
+    "feature-login": {
+      "tags": ["scope:auth", "type:feature"]
     }
   }
 }

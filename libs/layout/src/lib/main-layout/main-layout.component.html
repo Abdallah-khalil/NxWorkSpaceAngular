@@ -1,0 +1,17 @@
+<clr-main-container>
+  <prio-header></prio-header>
+  <div class="content-container">
+    <clr-vertical-nav [clr-nav-level]="2" role="navigation">
+      <a
+        *ngFor="let nav of links"
+        clrVerticalNavLink
+        [routerLink]="nav.path"
+        routerLinkActive="active"
+        >{{ nav.title }}
+      </a>
+    </clr-vertical-nav>
+    <main class="content-area" #main tabindex="-1" role="main">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</clr-main-container>

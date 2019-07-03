@@ -57,11 +57,20 @@
         "depConstraints": [
           {
             "sourceTag": "type:app",
-            "onlyDependOnLibsWithTags": ["*"]
+            "onlyDependOnLibsWithTags": [
+              "type:util",
+              "type:ui",
+              "type:data-access",
+              "type:feature"
+            ]
           },
           {
             "sourceTag": "scope:mr",
-            "onlyDependOnLibsWithTags": ["*"]
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:mr"]
+          },
+          {
+            "sourceTag": "scope:clr",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:clr"]
           },
           {
             "sourceTag": "type:util",
@@ -86,6 +95,22 @@
           {
             "sourceTag": "scope:shared",
             "onlyDependOnLibsWithTags": ["scope:shared"]
+          },
+          {
+            "sourceTag": "scope:layout",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:layout"]
+          },
+          {
+            "sourceTag": "scope:auth",
+            "onlyDependOnLibsWithTags": [
+              "scope:shared",
+              "scope:shared-auth",
+              "scope:auth"
+            ]
+          },
+          {
+            "sourceTag": "scope:shared-auth",
+            "onlyDependOnLibsWithTags": ["scope:shared", "scope:shared-auth"]
           }
         ]
       }
