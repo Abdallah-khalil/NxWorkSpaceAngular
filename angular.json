@@ -515,6 +515,68 @@
           }
         }
       }
+    },
+    "ks-clarity-ks-clr-modal": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/ks-clr-modal",
+      "sourceRoot": "libs/ks-clarity/ks-clr-modal/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/ks-clr-modal/tsconfig.lib.json",
+              "libs/ks-clarity/ks-clr-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/ks-clr-modal/jest.config.js",
+            "tsConfig": "libs/ks-clarity/ks-clr-modal/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/ks-clr-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ks-clarity-ks-clr-wizard": {
+      "projectType": "library",
+      "root": "libs/ks-clarity/ks-clr-wizard",
+      "sourceRoot": "libs/ks-clarity/ks-clr-wizard/src",
+      "prefix": "ks-clr",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ks-clarity/ks-clr-wizard/tsconfig.lib.json",
+              "libs/ks-clarity/ks-clr-wizard/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ks-clarity/ks-clr-wizard/jest.config.js",
+            "tsConfig": "libs/ks-clarity/ks-clr-wizard/tsconfig.spec.json",
+            "setupFile": "libs/ks-clarity/ks-clr-wizard/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
