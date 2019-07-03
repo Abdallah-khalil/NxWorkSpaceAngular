@@ -34,6 +34,12 @@
       ],
       "@demo-prio-workspace/ks-clarity/util-inventory": [
         "libs/ks-clarity/util-inventory/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/ks-clr-modal": [
+        "libs/ks-clarity/ks-clr-modal/src/index.ts"
+      ],
+      "@demo-prio-workspace/ks-clarity/ks-clr-wizard": [
+        "libs/ks-clarity/ks-clr-wizard/src/index.ts"
       ]
     }
   },

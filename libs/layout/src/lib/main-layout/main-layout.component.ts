@@ -24,7 +24,7 @@ export class MainLayoutComponent implements OnInit {
     // { path: 'labels', title: 'Labels' },
     // { path: 'lists', title: 'Lists' },
     // { path: 'login', title: 'Login' },
-    // { path: 'modals', title: 'Modals' },
+    { path: '/modal', title: 'Modals' },
     // { path: 'passwords', title: 'Passwords' },
     // { path: 'progress-bars', title: 'Progress Bars' },
     // { path: 'radios', title: 'Radios' },
@@ -40,7 +40,7 @@ export class MainLayoutComponent implements OnInit {
     // { path: 'treeview', title: 'Tree View' },
     // { path: 'typography', title: 'Typography' },
     // { path: 'vertical-nav', title: 'Vertical Nav' },
-    // { path: 'wizards', title: 'Wizards' }
+    { path: '/wizard', title: 'Wizards' }
   ];
   constructor() {}
 

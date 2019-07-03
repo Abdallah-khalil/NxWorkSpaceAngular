@@ -40,6 +40,12 @@
     },
     "ks-clarity-util-inventory": {
       "tags": ["scope:clr", "type:util"]
+    },
+    "ks-clarity-ks-clr-modal": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-ks-clr-wizard": {
+      "tags": ["scope:clr", "type:feature"]
     }
   }
 }
