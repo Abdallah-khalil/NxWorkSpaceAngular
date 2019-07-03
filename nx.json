@@ -46,6 +46,12 @@
     },
     "feature-login": {
       "tags": ["scope:auth", "type:feature"]
+    },
+    "ks-clarity-ks-clr-modal": {
+      "tags": ["scope:clr", "type:feature"]
+    },
+    "ks-clarity-ks-clr-wizard": {
+      "tags": ["scope:clr", "type:feature"]
     }
   }
 }

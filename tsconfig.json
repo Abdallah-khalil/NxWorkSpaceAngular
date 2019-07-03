@@ -38,10 +38,13 @@
       "@demo-prio-workspace/data-access-auth": [
         "libs/data-access-auth/src/index.ts"
       ],
-      "@demo-prio-workspace/shared/data-access-shared-auth": [
-        "libs/shared/data-access-shared-auth/src/index.ts"
+      "@demo-prio-workspace/feature-login": ["libs/feature-login/src/index.ts"],
+      "@demo-prio-workspace/ks-clarity/ks-clr-modal": [
+        "libs/ks-clarity/ks-clr-modal/src/index.ts"
       ],
-      "@demo-prio-workspace/feature-login": ["libs/feature-login/src/index.ts"]
+      "@demo-prio-workspace/ks-clarity/ks-clr-wizard": [
+        "libs/ks-clarity/ks-clr-wizard/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

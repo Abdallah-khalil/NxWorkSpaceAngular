@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainLayoutComponent, LayoutModule } from '@demo-prio-workspace/layout';
-
 const routes: Routes = [
   {
     path: '',
@@ -44,6 +43,20 @@ const routes: Routes = [
         loadChildren: () =>
           import('@demo-prio-workspace/ks-clarity/data-grid').then(
             m => m.DataGridModule
+          )
+      },
+      {
+        path: 'modal',
+        loadChildren: () =>
+          import('@demo-prio-workspace/ks-clarity/ks-clr-modal').then(
+            m => m.KsClrModalModule
+          )
+      },
+      {
+        path: 'wizard',
+        loadChildren: () =>
+          import('@demo-prio-workspace/ks-clarity/ks-clr-wizard').then(
+            m => m.KsClrWizardModule
           )
       }
     ]
