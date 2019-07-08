@@ -1,4 +1,20 @@
 $clr-header-bgColor: purple;
 $clr-header-font-color: yellow;
 $clr-header-title-font-weight: 700;
+
 @import "../../../node_modules/@clr/ui/src/utils/components.clarity";
+
+.clr-input-wrapper {
+  max-height: 2rem!important;
+  height: 2rem!important;
+  width: 15rem!important;
+  border:.5px solid #8b8787;
+  border-radius: 0.125rem;
+}
+
+.clr-input {
+  max-height: 2rem!important;
+  height:2rem!important;
+  width: 15rem!important;
+  border:none!important;
+}

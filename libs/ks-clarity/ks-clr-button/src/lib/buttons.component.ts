@@ -7,6 +7,9 @@ import { ClrLoadingState, ClrButton, ClrLoadingButton } from '@clr/angular';
 })
 export class ButtonsComponent {
   public validateState: ClrLoadingState = ClrLoadingState.DEFAULT;
+  public validateStates: ClrLoadingState[] = [
+    ClrLoadingState.DEFAULT, ClrLoadingState.DEFAULT, ClrLoadingState.DEFAULT, ClrLoadingState.DEFAULT, ClrLoadingState.DEFAULT
+  ]
   public submitState: ClrLoadingState = ClrLoadingState.DEFAULT;
   public validateSmState = false;
   public submitSmState: ClrLoadingState = ClrLoadingState.DEFAULT;
@@ -41,6 +44,13 @@ export class ButtonsComponent {
       this.validateState = ClrLoadingState.SUCCESS;
     }, 1500);
   }
+  validateDemoCustomized(validateState, index) {
+    this.validateStates[index] = validateState;
+    this.validateStates[index] = ClrLoadingState.LOADING;
+    setTimeout(() => {
+      this.validateStates[index] = ClrLoadingState.SUCCESS;
+    }, 1500);
+  }
 
   submitDemo() {
     this.submitState = ClrLoadingState.LOADING;
@@ -61,5 +71,8 @@ export class ButtonsComponent {
     setTimeout(() => {
       this.submitSmState = ClrLoadingState.DEFAULT;
     }, 1500);
+  }
+  print(event) {
+    console.log('event', event);
   }
 }
