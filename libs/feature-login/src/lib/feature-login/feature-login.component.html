@@ -2,3 +2,17 @@
   feature-login works!
 </p>
 <button (click)="googleLogin()">Login with google</button>
+
+
+<div class="row">
+
+  <div class="col-md-8">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <input type="text" formControlName="email" class="form-control mb-2" placeholder="Email" required autofocus>
+      <input type="password" formControlName="password" class="form-control mb-2" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block mb-1" type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </div>
+</div>
+<button class="btn btn-lg btn-danger btn-block mb-1" [routerLink]="['/auth/register']">Register</button>
+<button class="btn btn-lg btn-warning btn-block mb-1"  [routerLink]="['/auth/forgot-password']">Forget Password</button>

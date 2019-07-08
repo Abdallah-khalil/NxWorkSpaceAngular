@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () =>
       import('@demo-prio-workspace/feature-login').then(
         m => m.FeatureLoginModule
