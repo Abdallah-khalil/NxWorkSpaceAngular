@@ -19,6 +19,9 @@ export class FeatureLoginComponent implements OnInit {
   ngOnInit() {
   }
   googleLogin() {
+    this.authService.user$.subscribe(user=>{
+      debugger;
+    })
     this.authService.doGoogleLogin().then(response => {
     }).catch(error => {
 
@@ -26,11 +29,7 @@ export class FeatureLoginComponent implements OnInit {
   }
   login() {
   const formValue=this.loginForm.value;
-    this.authService.login(formValue.email,formValue.password).then(response => {
-      
-    }).catch(error=>{
-      alert(error.message);
-    })
+    this.authService.login(formValue.email,formValue.password);
   }
  
 }

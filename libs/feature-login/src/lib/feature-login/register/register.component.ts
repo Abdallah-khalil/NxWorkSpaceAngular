@@ -14,7 +14,11 @@ export class RegisterComponent implements OnInit {
     password: [''],
     
   });
-  constructor(private fb: FormBuilder,private authService: AuthService) { }
+  constructor(private fb: FormBuilder,private authService: AuthService) {
+    this.authService.user$.subscribe(user=>{
+      debugger;
+    })
+   }
 
   ngOnInit() {
   }

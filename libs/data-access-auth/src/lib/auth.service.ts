@@ -3,48 +3,48 @@ import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from "@angular/router";
 import { auth } from 'firebase/app';
-import { User } from 'firebase';
+import { User } from './user.model'; // optional
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Observable, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  user$: Observable<User>;
 
   user: User;
-  constructor(public afAuth: AngularFireAuth, public router: Router) {
-
-    this.afAuth.authState.subscribe(user => {
-      debugger;
-      if (user) {
-        this.user = user;
-        if(!user.emailVerified){
-          this.sendEmailVerification();
-        }else{
-          this.router.navigate(['auth/register']);
+  constructor(public afAuth: AngularFireAuth,
+    private afs: AngularFirestore,
+    public router: Router) {
+    this.user$ = this.afAuth.authState.pipe(
+      switchMap(user => {
+        // Logged in
+        if (user) {
+          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+        } else {
+          // Logged out
+          return of(null);
         }
-        localStorage.setItem('user', JSON.stringify(this.user));
-      } else {
-        this.router.navigate(['auth/login']);
-        localStorage.setItem('user', null);
-      }
-    })
+      })
+    );
+
   }
+
   async login(email: string, password: string) {
-    return new Promise<any>((resolve, reject) => {
-      this.afAuth.auth.signInWithEmailAndPassword(email, password)
-        .then(res => {
-          this.router.navigate(['auth/register']);
-          resolve(res);
-        }).catch((err) => {
-          reject(err); // Here.
-        });
-    })
-
-
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+      .then(res => {
+        this.router.navigate(['auth/register']);
+      }).catch((error) => {
+        alert(error.message);
+      });
   }
   async register(email: string, password: string) {
-    var result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+    await this.afAuth.auth.createUserWithEmailAndPassword(email, password)
     this.sendEmailVerification();
   }
+
   async sendEmailVerification() {
     await this.afAuth.auth.currentUser.sendEmailVerification()
     this.router.navigate(['auth/verify-email']);
