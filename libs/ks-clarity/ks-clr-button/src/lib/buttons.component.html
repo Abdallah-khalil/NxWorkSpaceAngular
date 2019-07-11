@@ -1,38 +1,15 @@
-<h1>Buttons & Button Groups</h1>
-<!-- <prio-button [btn_type]="'primary'" [btn_text]="'Primary'" (prio_click)="print($event)">
-</prio-button> -->
+<h1>Custom Button</h1>
+<!-- Default prio button -->
+<prio-button [label]="'Default'" (Click)="onClick($event)">
+</prio-button>
+<!-- Customized prio button -->
+<prio-button [loadingState]="loadingState" [type]="'btn-success'"
+[size]="'normal'" [style]="'solid'" (Click)="onClick($event)"
+[isBlock]="true" [isIcon]="true" [label]="'Home'">
+    <prio-icon [icon]="'home'"></prio-icon>
+</prio-button>
 
-<!-- <prio-button>
-  <button class="btn btn-primary" (click)="print($event)">primary</button>
-</prio-button>
-<prio-button>
-  <button class="btn btn-secondary" (click)="print($event)">secondary</button>
-</prio-button>
-<prio-button>
-  <button class="btn btn-success" (click)="print($event)">success</button>
-</prio-button>
-<prio-button>
-  <button class="btn btn-warning" (click)="print($event)">warning</button>
-</prio-button>
-<prio-button>
-  <button class="btn btn-danger" (click)="print($event)">danger</button>
-</prio-button><br> -->
-<prio-button>
-  <button [clrLoading]="validateStates[0]" class="btn btn-primary" (click)="validateDemoCustomized(validateStates[0],0)">Validate</button>
-</prio-button>
-<prio-button>
-  <button [clrLoading]="validateStates[1]" class="btn btn-secondary" (click)="validateDemoCustomized(validateStates[1],1)">Validate</button>
-</prio-button>
-<prio-button>
-    <button [clrLoading]="validateStates[2]" class="btn btn-success" (click)="validateDemoCustomized(validateStates[2],2)">Validate</button>
-</prio-button>
-<prio-button>
-    <button [clrLoading]="validateStates[3]" class="btn btn-warning" (click)="validateDemoCustomized(validateStates[3],3)">Validate</button>
-  </prio-button>
-<prio-button>
-  <button [clrLoading]="validateStates[4]" class="btn btn-danger" (click)="validateDemoCustomized(validateStates[4],4)">Validate</button>
-</prio-button>
-<!-- <demo-prio-workspace-prio-input></demo-prio-workspace-prio-input> -->
+<h1>Buttons & Button Groups</h1>
 <p>
   Button groups are for creating collections of similar type action buttons.
   There are several styles of button
@@ -105,7 +82,7 @@
       <clr-icon shape="home"></clr-icon>
     </button>
     <button class="btn btn-danger btn-icon">
-      <clr-icon shape="home"></clr-icon>
+      <clr-icon shape="home"></clr-icon>HOme
     </button>
     <button class="btn btn-icon" disabled>
       <clr-icon shape="home"></clr-icon>

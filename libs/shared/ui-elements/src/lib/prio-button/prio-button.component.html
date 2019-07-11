@@ -1,1 +1,10 @@
-<ng-content></ng-content>
+<button [class]="'btn '+type+(style==='outline'? '-outline':'')" (click)="onClick($event)"
+[class.btn-link]="style==='flat'"
+[class.btn-icon]="isIcon===true"
+[class.btn-block]="isBlock"
+[class.btn-sm]="size==='small'"
+[clrLoading]="loadingState"
+>
+{{label}}
+  <ng-content></ng-content>
+</button>

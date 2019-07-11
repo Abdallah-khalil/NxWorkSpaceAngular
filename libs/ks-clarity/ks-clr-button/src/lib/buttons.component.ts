@@ -13,6 +13,7 @@ export class ButtonsComponent {
   public submitState: ClrLoadingState = ClrLoadingState.DEFAULT;
   public validateSmState = false;
   public submitSmState: ClrLoadingState = ClrLoadingState.DEFAULT;
+  loadingState: ClrLoadingState = ClrLoadingState.DEFAULT;
   numbers: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   display: number[];
 
@@ -37,7 +38,13 @@ export class ButtonsComponent {
     }
     console.log(this.display);
   }
-
+  onClick($event){
+    this.loadingState = ClrLoadingState.LOADING;
+    setTimeout(() => {
+    this.loadingState = ClrLoadingState.SUCCESS;
+    }, 1000);
+    console.log($event);
+  }
   validateDemo() {
     this.validateState = ClrLoadingState.LOADING;
     setTimeout(() => {
