@@ -17,6 +17,7 @@ export class PrioButtonComponent implements OnInit {
   @Input() isBlock = false ;  // if true: button take dislay as block
   @Input() isIcon = false ;  // if true: turns button view to icon (also if no text exists) and it takes class btn-icon
   @Input() label = '' ;    //buttontext
+  @Input() isDisabled = false;
   // @Input() iconShape = '';
   @Input() loadingState = ClrLoadingState.DEFAULT ;  // loading state
   @Output() Click = new EventEmitter();   //click event
