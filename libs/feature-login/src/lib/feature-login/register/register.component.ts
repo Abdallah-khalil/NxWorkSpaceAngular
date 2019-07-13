@@ -1,7 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { AuthService } from 'libs/data-access-auth/src/lib/auth.service';
+
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'register',
@@ -15,9 +17,7 @@ export class RegisterComponent implements OnInit {
     
   });
   constructor(private fb: FormBuilder,private authService: AuthService) {
-    this.authService.user$.subscribe(user=>{
-      debugger;
-    })
+  
    }
 
   ngOnInit() {
