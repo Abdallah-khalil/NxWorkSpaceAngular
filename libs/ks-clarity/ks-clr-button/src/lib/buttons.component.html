@@ -1,5 +1,15 @@
-<h1>Buttons & Button Groups</h1>
+<h1>Custom Button</h1>
+<!-- Default prio button -->
+<prio-button [label]="'Default'" (Click)="onClick($event)">
+</prio-button>
+<!-- Customized prio button -->
+<prio-button [loadingState]="loadingState" [type]="'btn-success'"
+[size]="'normal'" [style]="'solid'" (Click)="onClick($event)"
+[isBlock]="true" [isIcon]="true" [label]="'Home'" [isDisabled]="false">
+    <prio-icon [icon]="'home'"></prio-icon>
+</prio-button>
 
+<h1>Buttons & Button Groups</h1>
 <p>
   Button groups are for creating collections of similar type action buttons.
   There are several styles of button
@@ -72,7 +82,7 @@
       <clr-icon shape="home"></clr-icon>
     </button>
     <button class="btn btn-danger btn-icon">
-      <clr-icon shape="home"></clr-icon>
+      <clr-icon shape="home"></clr-icon>HOme
     </button>
     <button class="btn btn-icon" disabled>
       <clr-icon shape="home"></clr-icon>

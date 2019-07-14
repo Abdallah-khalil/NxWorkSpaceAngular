@@ -1,0 +1,48 @@
+// $clr-color-action-600: #000000!default; //bg-color
+// $clr-color-neutral-0: #ffffff!default; //color
+// $clr-color-action-50: #000000!default; //hover color
+// $clr-color-action-800: #ffffff!default; //bg-color for hover
+// $clr-color-neutral-400: rgb(160, 156, 156)!default;  //bg-color diabled
+// $clr-color-neutral-700: #000000!default;   //color diabaled
+// $clr-color-action-500: 0 2px 0 0 #242b2da6 inset!default; //box-shadow color
+// $clr-button-height: 50px !default;
+// $clr-btn-horizontal-padding: 6rem!default;
+
+// @import "../../../../../../node_modules/@clr/ui/src/utils/components.clarity";
+
+// $primary: #000000;
+// $secondary: #e0e0d1;
+// $danger: #990000;
+// $warning:  #ffd11a;
+// $success: #00cc00;
+
+// @mixin border($color){
+//   border: 1px solid $color;
+// }
+
+// :host ::ng-deep {
+//   .btn{
+//     width: 15rem!important;
+//     height: 2rem;
+//   }
+//   .btn-primary{
+//     background-color: $primary !important;
+//     @include border($primary);
+//   }
+//   .btn-danger{
+//     background-color: $danger !important;
+//     @include border($danger);
+//   }
+//   .btn-success{
+//     background-color: $success !important;
+//     @include border($success);
+//   }
+//   .btn-warning{
+//     background-color: $warning !important;
+//     @include border($warning);
+//   }
+//   .btn-secondary{
+//     background-color: $secondary !important;
+//     @include border($secondary);
+//   }
+// }
